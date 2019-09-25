@@ -1,5 +1,4 @@
-# education-a4
-Conner Ardman, Bradley Balansay, Nick Hytrek
+# Education Store
 
 ## Database ERD
 ![erd](https://github.com/info441-sp19/education-a4/blob/master/a4%20schema-2019-05-14_17_12.png)
