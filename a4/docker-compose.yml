@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  education-a4:
+    image: 441final.azurecr.io/final:latest
+    build: .
+    ports:
+      - 8000:8000

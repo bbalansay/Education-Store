@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+  <body>
+    <h1>The Bookstore</h1>
+    <form action="/auth/signin" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="Submit" class="btn btn-primary">
+      <input id="register" value="Register" class="btn btn-secondary">
+    </form>
+    <script type="text/javascript">
+      document.getElementById("register").addEventListener("click", () => {
+        window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/register";
+      });
+    </script>
+  </body>
+</html>

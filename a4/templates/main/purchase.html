@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Purchase</title>
+  </head>
+  <body>
+    <h1>Purchase</h1>
+    <ul>
+      {% for item in items %}
+          <li>{{ item.name }}
+            <ul>
+              <li>{{ item.description }}</li>
+            </ul>
+          </li>
+      {% endfor %}
+          <li>{{ address }}</li>
+          <li>{{ total_price }}</li>
+    </ul>
+  </body>
+</html>
